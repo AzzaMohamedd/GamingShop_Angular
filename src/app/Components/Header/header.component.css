@@ -1,28 +1,7 @@
 #header-container{
     background-image: url("../../../assets/images/banner-bg.jpg");
-    height: 600px;
+    background-position: center bottom;
+    height: fit-content;
     background-size: cover;
-}
-.header-sec{
-    padding: 50px 0;
-    color: #fff;
-}
-.header-text h1 , .header-text h3{
-    text-transform: uppercase;
-}
-.header-text h1 {
-    font-size: 60px;
-}
-
-/* .header-text{
-    display: flex;
-    align-items: center;
-    display: table-column-group;
-} */
-.image-header img{
-    border-radius: 10px;
-    height: 400px;
-}
-.image-header{
-    text-align: right;
+    border-radius: 0 0 150px 150px ;
 }

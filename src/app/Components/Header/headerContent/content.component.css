@@ -1,0 +1,51 @@
+.header-sec{
+    padding: 50px 0 230px 0;
+    color: #fff;
+}
+.header-text h1 , .header-text h3{
+    text-transform: uppercase;
+}
+.header-text h1 {
+    font-size: 60px;
+}
+
+.image-header img{
+    border-radius: 10px;
+    height: 400px;
+}
+.image-header{
+    text-align: right;
+}
+#searchContainer{
+    display: flex;
+    position: relative;
+    max-width: 450px;
+}
+#searchContainer button{
+    background-color: #f86158;
+    padding: 11.5px 30px;
+    border-radius: 25px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    position: absolute;
+    right:0;
+}
+#searchInput{
+    border-radius: 30px;
+    border: none;
+    padding: 13px 30px;
+    font-size: 14px;
+    max-width: 450px;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .image-header{
+        text-align: center;
+        margin-top: 40px;
+    }  
+    #searchContainer,#searchInput{
+        max-width: none;
+    }
+}

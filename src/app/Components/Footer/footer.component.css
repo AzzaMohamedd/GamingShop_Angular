@@ -1,0 +1,10 @@
+#footer{
+    background-image: url("../../../assets/images/banner-bg.jpg");
+    background-position: center bottom;
+    height: fit-content;
+    background-size: cover;
+    border-radius: 150px 150px 0 0;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+}

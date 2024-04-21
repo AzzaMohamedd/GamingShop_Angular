@@ -1,9 +1,18 @@
+nav{
+    padding: 60px 0;
+}
+.nav-link{
+    margin: 0 20px;
+}
+ul{
+    text-align: center;
+}
 .signin{
     background-color: #f86158;
     padding: 7px 0px;
     border-radius: 25px;
-    color: #fff;
     text-align: center;
+    width: inherit;
 }
 .signcont{
     width: 90px;
@@ -16,5 +25,13 @@ i{
     border: none;
 }
 a{
-    color: #fff;
+    color: #fff !important;
+    border-bottom: 2px solid transparent;
+}
+.active{
+    border-bottom: 2px solid #f86158;
+}
+.nav-item a:hover{
+    border-bottom: 2px solid #f86158;
+    transition: .3s;
 }
