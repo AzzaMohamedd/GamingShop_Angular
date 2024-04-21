@@ -1,0 +1,12 @@
+#items-section{
+    padding: 85px;
+}
+#items-section h1, #items-section h6{
+    font-weight: bold;
+}
+#items-section h6{
+    color: #f86158;
+}
+#items{
+    margin: 70px 0;
+}

@@ -1,0 +1,24 @@
+.card{
+    margin: 15px;
+}
+.card:hover{
+    color: blue;
+    transition: .3s;
+    cursor: pointer;
+}
+#addToCart{
+    background-color: #f86158;
+    color: #fff;
+    padding: 10px 13px;
+    border-radius: 100%;
+    position: absolute;
+    right: 10px;
+    top :10px;
+}
+#addToCart:hover{
+    background-color: blue;
+    transition: .3s;
+}
+.card-body{
+   position: relative;
+}
