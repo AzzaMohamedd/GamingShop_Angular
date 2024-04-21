@@ -1,0 +1,20 @@
+.signin{
+    background-color: #f86158;
+    padding: 7px 0px;
+    border-radius: 25px;
+    color: #fff;
+    text-align: center;
+}
+.signcont{
+    width: 90px;
+}
+i{
+    color: #fff;
+    font-size: larger;
+}
+.navbar-toggler{
+    border: none;
+}
+a{
+    color: #fff;
+}
