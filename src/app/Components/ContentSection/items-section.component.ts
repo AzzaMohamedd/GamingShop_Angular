@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ItemComponent } from './Item/item.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { IGameType } from '../../Models/igame-type';
 
 @Component({
   selector: 'app-items-section',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class ItemsSectionComponent {
  
   //Task1 : Display Products 
- gamesList:gameType[]=[{
+ gamesList:IGameType[]=[{
   id: 1,
   name: "Game1",
   category: "Adults' games",
@@ -56,7 +57,7 @@ export class ItemsSectionComponent {
   NameFlag = true;
   AgeFlag = true;
   btnFlag=false;
-  studentsList:studentType[]=[
+  studentsList:studentType[]=[  //must make interface for studentType
   {
     id:1,
     name:"Azza",
@@ -115,7 +116,7 @@ export class ItemsSectionComponent {
 
   // Task3 : drop down list options
 
-  tracksList:trackType[]=[{
+  tracksList:trackType[]=[{  //must make interface for trackType
     id:1,
     name:"PD",
     location:"Menofia"
@@ -138,24 +139,12 @@ selectTrack(e:Event){
   let s:HTMLSelectElement = e.target as HTMLSelectElement;
   let selectedID = Number(s.value);
   this.objTrack = this.tracksList.filter(x=>x.id==selectedID);
-
-  // console.log(this.objTrack.name);
-  // console.log(this.objTrack.location);
-  
 }
 
 }
 
 
-interface gameType{
-  id:number;
-  name: string;
-  category: string;
-  price: number;
-  quantity: number;
-  inStock: boolean;
-  image: string;
-}
+//make it in a separated interfaces in Models folder
 interface studentType{
   id:number;
   name:string;

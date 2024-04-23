@@ -1,24 +1,40 @@
 .card{
     margin: 15px;
+    position: relative;
 }
 .card:hover{
     color: blue;
     transition: .3s;
     cursor: pointer;
 }
-#addToCart{
-    background-color: #f86158;
+.forDiabledAddToCart{
     color: #fff;
     padding: 10px 13px;
     border-radius: 100%;
     position: absolute;
     right: 10px;
     top :10px;
+    background-color: #5a5a5a;
 }
-#addToCart:hover{
+.addToCart{
+    background-color: #f86158;
+}
+.addToCart:hover{
     background-color: blue;
     transition: .3s;
 }
 .card-body{
    position: relative;
+}
+
+#topSpan{
+    position: absolute;
+    color: #fff;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px 0;
+}
+.bi-trash3-fill{
+    font-size: larger;
+    cursor: pointer;
 }

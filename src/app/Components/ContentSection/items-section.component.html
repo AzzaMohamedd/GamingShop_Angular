@@ -6,61 +6,13 @@
     <h1>Trending Games</h1>
     <div class="container" id="items">
         <div class="row">
-            
-            <!-- <app-item class="col-lg-3 col-md-4"></app-item>
-            <app-item class="col-lg-3 col-md-4"></app-item>
-            <app-item class="col-lg-3 col-md-4"></app-item>
-            <app-item class="col-lg-3 col-md-4"></app-item> -->
-
             @for(game of gamesList ; track game.id){
-                
-                <div class="col-lg-3 col-md-4">
-                    <div class="card">
-                        @switch (game.quantity) { 
-                            @case(0){
-                                <div id="topSpan" class="bg-danger">out of stock</div>
-                            } 
-                            @case(1){
-                                <div id="topSpan" class="bg-success">Last One</div>
-                            }
-                        }
-                        <img src="{{game.image}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{game.name}}</h5>
-                            <p class="card-text">{{game.price}}$</p>
-                            @switch (game.quantity) { 
-                                @case(0){
-                                    <p class="card-text text-danger">Quantity: {{game.quantity}}</p>
-                                } 
-                                @case(1){
-                                    <p class="card-text text-success">Quantity: {{game.quantity}}</p>
-                                }
-                                @default {
-                                    <p class="card-text">Quantity: {{game.quantity}}</p>
-                                }
-                            }
-                            
-                            
-                            @switch (game.quantity) { 
-                                @case(0){
-                                    <button href="#" class="forDiabledAddToCart border-0" disabled>
-                                        <i class="bi bi-basket2-fill"></i>
-                                    </button>
-                                } 
-                               @default{
-                                <button href="#" class="forDiabledAddToCart addToCart border-0">
-                                    <i class="bi bi-basket2-fill"></i>
-                                </button>
-                                }
-                            }
-                            
-                        </div>
-                    </div>
-                </div>
+              <app-item [game]="game" class="col-lg-3 col-md-4"></app-item> <!--Bind-->
             }
             
         </div>
     </div>
+    
     
     <!-- Task2 -->
 
