@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemComponent } from './Item/item.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IGameType } from '../../Models/igame-type';
+import { GameService } from '../../Services/game.service';
 
 @Component({
   selector: 'app-items-section',
@@ -11,46 +12,15 @@ import { IGameType } from '../../Models/igame-type';
   templateUrl: './items-section.component.html',
   styleUrl: './items-section.component.css'
 }) 
-export class ItemsSectionComponent {
+export class ItemsSectionComponent implements OnInit {
  
-  //Task1 : Display Products 
- gamesList:IGameType[]=[{
-  id: 1,
-  name: "Game1",
-  category: "Adults' games",
-  price: 999.99,
-  quantity: 10,
-  inStock: true,
-  image: "../../../assets/images/top-game-05.jpg"
-},
-  {
-    id: 2,
-    name: "Game2",
-    category: "children's games",
-    price: 500,
-    quantity: 0,
-    inStock: false,
-    image: "../../../assets/images/top-game-03.jpg"
-  },
-  {
-    id: 3,
-    name: "Game3",
-    category: "children's games",
-    price: 350,
-    quantity: 20,
-    inStock: true,
-    image: "../../../assets/images/top-game-04.jpg"
-  },
-  {
-    id: 4,
-    name: "Game4",
-    category: "Adults' games",
-    price: 146,
-    quantity: 1,
-    inStock: true,
-    image: "../../../assets/images/top-game-02.jpg"
-  }];
+gamesList:IGameType[]=[];
 
+constructor(public service:GameService) {
+}
+ngOnInit():void{
+  this.gamesList=this.service.getAllGames();
+}
 ////////////////////////////////////////////////////////////////////
 
   // Task2 : student validations
